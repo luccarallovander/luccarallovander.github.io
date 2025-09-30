@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — Data Science & Research</title>
+  <meta name="description" content="Portfolio and research highlights." />
+  <meta property="og:title" content="Your Name — Data Science & Research" />
+  <meta property="og:description" content="Portfolio and research highlights." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    :root{
+      --bg: #0b0f14; --card:#121922; --muted:#93a4b3; --text:#e9f0f7; --primary:#4aa8ff; --accent:#7cf; --ring:rgba(74,168,255,.35);
+      --radius: 16px; --shadow: 0 10px 35px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;scroll-behavior:smooth;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
+    a{color:var(--primary);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrapper{max-width:1000px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;background:linear-gradient(to bottom, rgba(11,15,20,.9), rgba(11,15,20,.6));backdrop-filter: blur(6px);z-index:10;border-bottom:1px solid rgba(255,255,255,.06)}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:10px}
+    .avatar{width:42px;height:42px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,.1)}
+    .links{display:flex;gap:16px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.12);padding:8px 12px;border-radius:999px;transition:.2s;background:transparent}
+    .btn:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(0,0,0,.35)}
+    main{padding:40px 0 80px}
+    section{margin:48px 0;padding:24px;border-radius:var(--radius);background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow)}
+    h1{font-size:38px;line-height:1.2;margin:0 0 6px}
+    h2{font-size:24px;margin:0 0 18px}
+    h3{margin:18px 0 8px}
+    p{margin:0 0 12px;color:var(--muted)}
+    .grid{display:grid;gap:16px}
+    @media (min-width:800px){.grid-2{grid-template-columns:1.1fr .9fr}}
+    .card{background:var(--card);border-radius:var(--radius);padding:18px;border:1px solid rgba(255,255,255,.06)}
+    .project{display:grid;gap:10px}
+    .project a.more{justify-self:start}
+    .chips{display:flex;gap:8px;flex-wrap:wrap}
+    .chip{font-size:12px;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08)}
+    .list{display:grid;gap:12px}
+    .list-item{display:flex;gap:12px;align-items:flex-start}
+    .badge{min-width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.08);display:grid;place-items:center;border:1px solid rgba(255,255,255,.1)}
+    .contact form{display:grid;gap:12px}
+    input,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:#0e141b;color:var(--text);outline:none}
+    input:focus,textarea:focus{border-color:var(--primary);box-shadow:0 0 0 6px var(--ring)}
+    .footer{opacity:.7;text-align:center;margin-top:28px}
+    .pillbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+    .pill{background:rgba(74,168,255,.12);border:1px solid rgba(74,168,255,.35);color:#cfe8ff;padding:6px 10px;border-radius:999px;font-size:12px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrapper">
+      <nav>
+        <div class="brand">
+          <img class="avatar" src="avatar.jpg" alt="Your headshot" />
+          <strong>Your Name</strong>
+        </div>
+        <div class="links">
+          <a class="btn" href="#about">About</a>
+          <a class="btn" href="#research">Research</a>
+          <a class="btn" href="#projects">Projects</a>
+          <a class="btn" href="#contact">Contact</a>
+          <a class="btn" href="cv.pdf" target="_blank" rel="noopener">CV</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrapper">
+    <section class="grid grid-2" id="hero">
+      <div>
+        <h1>Your Name</h1>
+        <p>MSc Social Data Science @ University X</p>
+        <p>I specialise in data science for social good—where machine learning meets humanitarian decision‑making.</p>
+        <div class="pillbar">
+          <span class="pill">Machine Learning</span>
+          <span class="pill">Causal Inference</span>
+          <span class="pill">NLP</span>
+          <span class="pill">R / Python</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Links</h3>
+        <div class="list">
+          <div class="list-item"><span class="badge">in</span> <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></div>
+          <div class="list-item"><span class="badge">GH</span> <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></div>
+          <div class="list-item"><span class="badge">X</span> <a href="https://x.com/" target="_blank" rel="noopener">Twitter/X</a></div>
+          <div class="list-item"><span class="badge">@</span> <a href="mailto:you@example.com">you@example.com</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Education</h3>
+          <ul>
+            <li><strong>University X</strong> — MSc Social Data Science (2024–2025)</li>
+            <li><strong>University Y</strong> — BSc PPE w/ Social Data Science (2020–2024)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Experience</h3>
+          <ul>
+            <li>Organisation A — Data Scientist (2023–2024)</li>
+            <li>NGO B — Volunteer Head of Data & Analytics (2022–2024)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <h2>Research & Open‑source</h2>
+      <div class="grid">
+        <article class="project card">
+          <h3>Wildfire Risk & Social Vulnerability</h3>
+          <p>R package coupling wildfire risk (RF) with UK social vulnerability data. Paper under review.</p>
+          <div class="chips">
+            <span class="chip">R</span><span class="chip">Random Forest</span><span class="chip">Open Data</span>
+          </div>
+          <a class="more btn" href="#" target="_blank" rel="noopener">GitHub</a>
+        </article>
+        <article class="project card">
+          <h3>Health Inequalities Explorer</h3>
+          <p>Open-access web app exploring location‑based health inequalities across the UK.</p>
+          <div class="chips">
+            <span class="chip">R Shiny</span><span class="chip">Public Health</span>
+          </div>
+          <a class="more btn" href="#" target="_blank" rel="noopener">Web App</a>
+        </article>
+        <article class="project card">
+          <h3>Monitoring Building Destruction</h3>
+          <p>Detect building damage from public Sentinel‑1 imagery with ML.</p>
+          <div class="chips">
+            <span class="chip">Python</span><span class="chip">CV</span><span class="chip">Remote Sensing</span>
+          </div>
+          <a class="more btn" href="#" target="_blank" rel="noopener">GitHub</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Selected Projects</h2>
+      <div class="grid">
+        <article class="project card">
+          <h3>Peaky Blinders Network Analysis</h3>
+          <p>Intro network analysis using web‑scraped TV transcripts.</p>
+          <a class="more btn" href="#" target="_blank" rel="noopener">GitHub</a>
+        </article>
+        <article class="project card">
+          <h3>Gender Stereotypes in Rap</h3>
+          <p>Quantifying gender stereotypes in ~8k French rap songs via WEAT.</p>
+          <a class="more btn" href="#" target="_blank" rel="noopener">GitHub</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Get in touch</h2>
+      <form action="https://formspree.io/f/your-id" method="POST">
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea name="message" placeholder="Message" rows="6" required></textarea>
+        <button class="btn" type="submit">Send</button>
+      </form>
+      <p class="footer">Design inspired by HTML5 UP templates. © <span id="year"></span> Your Name</p>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
