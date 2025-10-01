@@ -9,38 +9,22 @@
   <meta property="og:description" content="Portfolio and research highlights." />
   <meta property="og:type" content="website" />
   <link rel="icon" href="favicon.ico" />
-  <!-- Inter font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      /* Light theme */
-      --bg:#ffffff;
-      --card:#f8fafc;
-      --muted:#4b5563;
-      --text:#0b0f14;
-      --primary:#1d4ed8;      /* blue-700 */
-      --accent:#0ea5e9;       /* sky-500 */
-      --ring:rgba(29,78,216,.15);
-      --border:#e5e7eb;       /* gray-200 */
-      --radius:16px;
-      --shadow:0 6px 24px rgba(0,0,0,.06);
+      --bg:#ffffff; --card:#f8fafc; --muted:#4b5563; --text:#0b0f14;
+      --primary:#1d4ed8; --ring:rgba(29,78,216,.15); --border:#e5e7eb;
+      --radius:16px; --shadow:0 6px 24px rgba(0,0,0,.06);
     }
     *{box-sizing:border-box}
     html,body{
-      margin:0;height:100%;
-      scroll-behavior:smooth;
+      margin:0;height:100%;scroll-behavior:smooth;
       background:var(--bg);color:var(--text);
-      font:16px/1.6 "Inter", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial;
+      font:16px/1.6 Georgia, "Times New Roman", Times, serif;
     }
     a{color:var(--primary);text-decoration:none}
     a:hover{text-decoration:underline}
     .wrapper{max-width:1000px;margin:0 auto;padding:24px}
-    header{
-      position:sticky;top:0;z-index:10;
-      background:rgba(255,255,255,.8);
-      backdrop-filter: blur(6px);
-      border-bottom:1px solid var(--border);
-    }
+    header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.85);backdrop-filter: blur(6px);border-bottom:1px solid var(--border)}
     nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
     .brand{display:flex;align-items:center;gap:10px}
     .avatar{width:42px;height:42px;border-radius:50%;object-fit:cover;border:1px solid var(--border)}
@@ -49,44 +33,38 @@
     .btn:hover{transform:translateY(-1px);box-shadow:var(--shadow)}
     main{padding:40px 0 80px}
     section{margin:48px 0;padding:24px;border-radius:var(--radius);background:#fff;border:1px solid var(--border);box-shadow:var(--shadow)}
-    h1{font-size:38px;line-height:1.2;margin:0 0 6px;font-weight:800}
-    h2{font-size:28px;margin:0 0 18px;font-weight:700}
-    h3{margin:18px 0 8px;font-weight:700}
+    h1{font-size:38px;line-height:1.2;margin:0 0 6px}
+    h2{font-size:28px;margin:0 0 18px}
+    h3{margin:18px 0 8px}
     p{margin:0 0 12px;color:var(--muted)}
     .grid{display:grid;gap:16px}
     @media (min-width:800px){.grid-2{grid-template-columns:1.1fr .9fr}}
     .card{background:var(--card);border-radius:var(--radius);padding:18px;border:1px solid var(--border)}
 
-    /* Hero layout + big photo + socials row */
+    /* HERO */
     #hero{align-items:center}
     .hero-photo{display:grid;place-items:center}
-    .avatar-lg{
-      width:280px;height:280px;object-fit:cover;border-radius:50%;
-      border:1px solid var(--border);box-shadow:var(--shadow);
-    }
+    .avatar-lg{width:280px;height:280px;object-fit:cover;border-radius:50%;border:1px solid var(--border);box-shadow:var(--shadow)}
     .pillbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
     .pill{background:#eef2ff;border:1px solid #c7d2fe;color:#1e3a8a;padding:6px 10px;border-radius:999px;font-size:12px}
 
+    /* Socials */
     .socials{display:flex;gap:10px;align-items:center;margin-top:16px;flex-wrap:wrap}
     .iconlink{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);padding:8px 12px;border-radius:999px;background:#fff}
     .icon{width:18px;height:18px;display:inline-block}
 
-    /* About stacked */
+    /* About */
     .stack{display:grid;gap:16px}
-
-    /* Education formatting */
     .edu-item{margin-bottom:8px}
     .edu-item strong{font-weight:700}
-    .edu-first{margin:6px 0 16px}       /* extra gap after MSc line only */
-    .edu-detail{margin:4px 0 4px}       /* tight lines, no extra gaps between them */
-
-    /* Experience */
+    .edu-first{margin:6px 0 16px} /* extra gap after MSc line only */
+    .edu-detail{margin:4px 0 4px}
     .exp-item{margin-bottom:12px}
     .exp-item strong{font-weight:700}
     .dates{color:var(--muted);font-style:italic}
 
-    /* Project/Research actions */
-    .actions{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+    /* Research/Projects actions */
+    .actions{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
     .iconbtn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--border);padding:6px 10px;border-radius:10px;background:#fff}
     .iconbtn:hover{box-shadow:var(--shadow)}
     .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
@@ -126,26 +104,22 @@
           <span class="pill">R / Python</span>
         </div>
 
-        <!-- Socials with LinkedIn, Email, GitHub, CV -->
+        <!-- Socials -->
         <div class="socials">
           <a class="iconlink" href="https://www.linkedin.com/in/lucca-rallo-vanderchmitt/" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <!-- LinkedIn -->
-            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V23h-4V8zM8 8h3.8v2.05h.05C12.52 8.83 14 7.5 16.7 7.5 22 7.5 23 10.87 23 16v7h-4v-6.2c0-1.48-.03-3.38-2.06-3.38-2.06 0-2.38 1.6-2.38 3.27V23H10V8z"/></svg>
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V23h-4V8zM8 8h3.8v2.05h.05C12.52 8.83 14 7.5 16.7 7.5 22 7.5 23 10.87 23 16v7h-4v-6.2c0-1.48-.03-3.38-2.06-3.38-2.06 0-2.38 1.6-2.38 3.27V23H10V8z"/></svg>
             LinkedIn
           </a>
           <a class="iconlink" href="mailto:l.rallo.vanderchmitt@gmail.com" aria-label="Email">
-            <!-- Email -->
-            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/></svg>
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/></svg>
             l.rallo.vanderchmitt@gmail.com
           </a>
           <a class="iconlink" href="https://github.com/luccarallovander" target="_blank" rel="noopener" aria-label="GitHub">
-            <!-- GitHub -->
-            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.09-.75.08-.74.08-.74 1.2.08 1.84 1.23 1.84 1.23 1.08 1.85 2.83 1.31 3.52 1 .11-.79.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.23-3.22-.12-.3-.54-1.51.12-3.14 0 0 1.01-.32 3.3 1.23A11.5 11.5 0 0 1 12 6.84c1.02 0 2.05.14 3.01.4 2.28-1.55 3.29-1.23 3.29-1.23.67 1.63.25 2.84.13 3.14.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.49 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .5z"/></svg>
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.09-.75.08-.74.08-.74 1.2.08 1.84 1.23 1.84 1.23 1.08 1.85 2.83 1.31 3.52 1 .11-.79.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.23-3.22-.12-.3-.54-1.51.12-3.14 0 0 1.01-.32 3.3 1.23A11.5 11.5 0 0 1 12 6.84c1.02 0 2.05.14 3.01.4 2.28-1.55 3.29-1.23 3.29-1.23.67 1.63.25 2.84.13 3.14.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.49 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .5z"/></svg>
             GitHub
           </a>
           <a class="iconlink" href="cv.pdf" target="_blank" rel="noopener" aria-label="CV">
-            <!-- CV / Document -->
-            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM13 3.5 18.5 9H13V3.5zM8 12h8v2H8v-2zm0 4h8v2H8v-2z"/></svg>
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM13 3.5 18.5 9H13V3.5zM8 12h8v2H8v-2zm0 4h8v2H8v-2z"/></svg>
             CV
           </a>
         </div>
@@ -216,11 +190,33 @@
             <strong>“Revisiting Moral Contagion Theory in Social Media Data”</strong> (forthcoming).
           </li>
         </ul>
+        <div class="actions">
+          <a class="iconbtn" href="#" target="_blank" rel="noopener" aria-label="Publication PDF">
+            <!-- PDF icon -->
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM8 14h3a2 2 0 0 0 0-4H8v4zm2-3h1a1 1 0 1 1 0 2h-1v-2zm3-7.5L18.5 9H13V3.5z"/></svg>
+            PDF
+          </a>
+          <a class="iconbtn" href="#" target="_blank" rel="noopener" aria-label="Publication GitHub">
+            <!-- GitHub icon -->
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.09-.75.08-.74.08-.74 1.2.08 1.84 1.23 1.84 1.23 1.08 1.85 2.83 1.31 3.52 1 .11-.79.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.23-3.22-.12-.3-.54-1.51.12-3.14 0 0 1.01-.32 3.3 1.23A11.5 11.5 0 0 1 12 6.84c1.02 0 2.05.14 3.01.4 2.28-1.55 3.29-1.23 3.29-1.23.67 1.63.25 2.84.13 3.14.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.49 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .5z"/></svg>
+            GitHub
+          </a>
+        </div>
       </div>
 
       <div class="card">
         <h3>MSc Thesis</h3>
         <p><strong>“Mapping Civic and Ethnic Nationalism: Nationalist Party Discourses and Immigrant Integration Outcomes in Europe’s Substate Nationalist Regions”</strong></p>
+        <div class="actions">
+          <a class="iconbtn" href="#" target="_blank" rel="noopener" aria-label="Thesis PDF">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM8 14h3a2 2 0 0 0 0-4H8v4zm2-3h1a1 1 0 1 1 0 2h-1v-2zm3-7.5L18.5 9H13V3.5z"/></svg>
+            PDF
+          </a>
+          <a class="iconbtn" href="#" target="_blank" rel="noopener" aria-label="Thesis GitHub">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.09-.75.08-.74.08-.74 1.2.08 1.84 1.23 1.84 1.23 1.08 1.85 2.83 1.31 3.52 1 .11-.79.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.23-3.22-.12-.3-.54-1.51.12-3.14 0 0 1.01-.32 3.3 1.23A11.5 11.5 0 0 1 12 6.84c1.02 0 2.05.14 3.01.4 2.28-1.55 3.29-1.23 3.29-1.23.67 1.63.25 2.84.13 3.14.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.49 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .5z"/></svg>
+            GitHub
+          </a>
+        </div>
       </div>
     </section>
 
@@ -228,17 +224,19 @@
     <section id="projects">
       <h2>Selected Projects</h2>
       <div class="grid">
-        <!-- 1 -->
+        <!-- 1: Web Scraping Project -->
         <article class="project card">
-          <h3>Online Moral Contagion on Twitter</h3>
-          <p>R package coupling wildfire risk (RF) with UK social vulnerability data. Paper under review.</p>
+          <h3>Web Scraping Project: U.S. Senate Hearing Transcripts</h3>
+          <p>Scraping U.S. Senate hearing transcripts since 1790 and building a dataset of actively serving judges over time, including professional career metadata.</p>
           <div class="chips">
-            <span class="chip">R</span><span class="chip">Random Forest</span><span class="chip">Open Data</span>
+            <span class="chip">R</span><span class="chip">Dynamic Scraping</span><span class="chip">NLP</span>
+            <span class="chip">Automation</span><span class="chip">Data Origination</span><span class="chip">Visualisation</span>
           </div>
           <div class="actions">
-            <a class="iconbtn" href="#" target="_blank" rel="noopener" aria-label="PDF">
-              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM8 14h3a2 2 0 0 0 0-4H8v4zm2-3h1a1 1 0 1 1 0 2h-1v-2zm3-7.5L18.5 9H13V3.5z"/></svg>
-              PDF
+            <a class="iconbtn" href="#" target="_blank" rel="noopener" aria-label="HTML document">
+              <!-- Doc icon -->
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM13 3.5 18.5 9H13V3.5z"/></svg>
+              HTML document
             </a>
             <a class="iconbtn" href="#" target="_blank" rel="noopener" aria-label="GitHub">
               <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.09-.75.08-.74.08-.74 1.2.08 1.84 1.23 1.84 1.23 1.08 1.85 2.83 1.31 3.52 1 .11-.79.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.23-3.22-.12-.3-.54-1.51.12-3.14 0 0 1.01-.32 3.3 1.23A11.5 11.5 0 0 1 12 6.84c1.02 0 2.05.14 3.01.4 2.28-1.55 3.29-1.23 3.29-1.23.67 1.63.25 2.84.13 3.14.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.49 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .5z"/></svg>
@@ -247,36 +245,18 @@
           </div>
         </article>
 
-        <!-- 2 -->
-        <article class="project card">
-          <h3>GenAI for Sentiment Analysis: Large Text Data</h3>
-          <p>Open-access web app exploring location-based health inequalities across the UK.</p>
-          <div class="chips">
-            <span class="chip">R Shiny</span><span class="chip">Public Health</span>
-          </div>
-          <div class="actions">
-            <a class="iconbtn" href="#" target="_blank" rel="noopener" aria-label="PDF">
-              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM8 14h3a2 2 0 0 0 0-4H8v4zm2-3h1a1 1 0 1 1 0 2h-1v-2zm3-7.5L18.5 9H13V3.5z"/></svg>
-              PDF
-            </a>
-            <a class="iconbtn" href="#" target="_blank" rel="noopener" aria-label="GitHub">
-              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.09-.75.08-.74.08-.74 1.2.08 1.84 1.23 1.84 1.23 1.08 1.85 2.83 1.31 3.52 1 .11-.79.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.23-3.22-.12-.3-.54-1.51.12-3.14 0 0 1.01-.32 3.3 1.23A11.5 11.5 0 0 1 12 6.84c1.02 0 2.05.14 3.01.4 2.28-1.55 3.29-1.23 3.29-1.23.67 1.63.25 2.84.13 3.14.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.49 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .5z"/></svg>
-              GitHub
-            </a>
-          </div>
-        </article>
-
-        <!-- 3 -->
+        <!-- 2: Google Maps API -->
         <article class="project card">
           <h3>Google Maps API: spatial data + Google Reviews</h3>
-          <p>Detect building damage from public Sentinel-1 imagery with ML.</p>
+          <p>Created the Quality and Accessibility of London Hospitals dataset by combining Google Places & Distance APIs (reviews/ratings) with public transport accessibility.</p>
           <div class="chips">
-            <span class="chip">Python</span><span class="chip">CV</span><span class="chip">Remote Sensing</span>
+            <span class="chip">R</span><span class="chip">API</span><span class="chip">GIS</span>
+            <span class="chip">Data Origination</span><span class="chip">Web Scraping</span>
           </div>
           <div class="actions">
-            <a class="iconbtn" href="#" target="_blank" rel="noopener" aria-label="PDF">
-              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM8 14h3a2 2 0 0 0 0-4H8v4zm2-3h1a1 1 0 1 1 0 2h-1v-2zm3-7.5L18.5 9H13V3.5z"/></svg>
-              PDF
+            <a class="iconbtn" href="#" target="_blank" rel="noopener" aria-label="HTML document">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM13 3.5 18.5 9H13V3.5z"/></svg>
+              HTML document
             </a>
             <a class="iconbtn" href="#" target="_blank" rel="noopener" aria-label="GitHub">
               <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.09-.75.08-.74.08-.74 1.2.08 1.84 1.23 1.84 1.23 1.08 1.85 2.83 1.31 3.52 1 .11-.79.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.23-3.22-.12-.3-.54-1.51.12-3.14 0 0 1.01-.32 3.3 1.23A11.5 11.5 0 0 1 12 6.84c1.02 0 2.05.14 3.01.4 2.28-1.55 3.29-1.23 3.29-1.23.67 1.63.25 2.84.13 3.14.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.49 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .5z"/></svg>
@@ -285,13 +265,17 @@
           </div>
         </article>
 
-        <!-- 4 -->
+        <!-- 3: Detecting Cheating -->
         <article class="project card">
           <h3>Detecting Cheating in Online Video Games Data</h3>
+          <p>Analysed PlayerUnknown’s Battlegrounds (PUBG) to measure cheating practices and contagion: teaming among cheaters, exposure effects, and whether observers later cheat.</p>
+          <div class="chips">
+            <span class="chip">Python</span><span class="chip">Hypothesis Testing</span><span class="chip">Computing</span>
+          </div>
           <div class="actions">
-            <a class="iconbtn" href="#" target="_blank" rel="noopener" aria-label="PDF">
-              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM8 14h3a2 2 0 0 0 0-4H8v4zm2-3h1a1 1 0 1 1 0 2h-1v-2zm3-7.5L18.5 9H13V3.5z"/></svg>
-              PDF
+            <a class="iconbtn" href="#" target="_blank" rel="noopener" aria-label="Notebook">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5zm4 2h10v2H7V7zm0 4h10v2H7v-2zm0 4h10v2H7v-2z"/></svg>
+              Notebook (.ipynb)
             </a>
             <a class="iconbtn" href="#" target="_blank" rel="noopener" aria-label="GitHub">
               <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.09-.75.08-.74.08-.74 1.2.08 1.84 1.23 1.84 1.23 1.08 1.85 2.83 1.31 3.52 1 .11-.79.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.23-3.22-.12-.3-.54-1.51.12-3.14 0 0 1.01-.32 3.3 1.23A11.5 11.5 0 0 1 12 6.84c1.02 0 2.05.14 3.01.4 2.28-1.55 3.29-1.23 3.29-1.23.67 1.63.25 2.84.13 3.14.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.49 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .5z"/></svg>
@@ -300,13 +284,18 @@
           </div>
         </article>
 
-        <!-- 5 -->
+        <!-- 4: LLM Fake News Detection -->
         <article class="project card">
-          <h3>LLM Fake News Detection</h3>
+          <h3>LLM Fake News Detection Algorithm</h3>
+          <p>Built a fake-news detector on Kaggle’s Fake vs True News dataset, achieving 99% accuracy.</p>
+          <div class="chips">
+            <span class="chip">LLMs</span><span class="chip">GenAI</span><span class="chip">Detection</span>
+            <span class="chip">NLP</span><span class="chip">Prompting</span>
+          </div>
           <div class="actions">
-            <a class="iconbtn" href="#" target="_blank" rel="noopener" aria-label="PDF">
-              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM8 14h3a2 2 0 0 0 0-4H8v4zm2-3h1a1 1 0 1 1 0 2h-1v-2zm3-7.5L18.5 9H13V3.5z"/></svg>
-              PDF
+            <a class="iconbtn" href="#" target="_blank" rel="noopener" aria-label="Notebook">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5zm4 2h10v2H7V7zm0 4h10v2H7v-2zm0 4h10v2H7v-2z"/></svg>
+              Notebook (.ipynb)
             </a>
             <a class="iconbtn" href="#" target="_blank" rel="noopener" aria-label="GitHub">
               <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.09-.75.08-.74.08-.74 1.2.08 1.84 1.23 1.84 1.23 1.08 1.85 2.83 1.31 3.52 1 .11-.79.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.23-3.22-.12-.3-.54-1.51.12-3.14 0 0 1.01-.32 3.3 1.23A11.5 11.5 0 0 1 12 6.84c1.02 0 2.05.14 3.01.4 2.28-1.55 3.29-1.23 3.29-1.23.67 1.63.25 2.84.13 3.14.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.49 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .5z"/></svg>
@@ -315,46 +304,58 @@
           </div>
         </article>
 
-        <!-- 6 -->
+        <!-- 5: ML Imputation -->
         <article class="project card">
           <h3>Machine Learning Imputation of Survey Data</h3>
+          <p>Imputed Oxford Internet Survey (OxIS) responses using ML methods.</p>
+          <div class="chips">
+            <span class="chip">Random Forest</span><span class="chip">LightGBM</span><span class="chip">Imputation</span>
+          </div>
           <div class="actions">
-            <a class="iconbtn" href="#" target="_blank" rel="noopener" aria-label="PDF">
-              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM8 14h3a2 2 0 0 0 0-4H8v4zm2-3h1a1 1 0 1 1 0 2h-1v-2zm3-7.5L18.5 9H13V3.5z"/></svg>
-              PDF
+            <a class="iconbtn" href="#" target="_blank" rel="noopener" aria-label="HTML document">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM13 3.5 18.5 9H13V3.5z"/></svg>
+              HTML document
             </a>
             <a class="iconbtn" href="#" target="_blank" rel="noopener" aria-label="GitHub">
-              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.09-.75.08-.74.08-.74 1.2.08 1.84 1.23 1.84 1.23 1.08 1.85 2.83 1.31 3.52 1 .11-.79.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.23-3.22-.12-.3-.54-1.51.12-3.14 0 0 1.01-.32 3.3 1.23A11.5 11.5 0 0 1 12 6.84c1.02 0 2.05.14 3.01.4 2.28-1.55 3.29-1.23 3.29-1.23.67 1.63.25 2.84.13 3.14.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.49 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .5z"/></svg>
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.09-.75.08-.74.08-.74 1.2.08 1.84 1.23 1.84 1.23 1.08 1.85 2.83 1.31 3.52 1 .11-.79.42-1.31 .76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.23-3.22-.12-.3-.54-1.51.12-3.14 0 0 1.01-.32 3.3 1.23A11.5 11.5 0 0 1 12 6.84c1.02 0 2.05.14 3.01.4 2.28-1.55 3.29-1.23 3.29-1.23 .67 1.63 .25 2.84 .13 3.14 .77 .84 1.23 1.91 1.23 3.22 0 4.61 -2.81 5.63 -5.49 5.93 .43 .37 .81 1.1 .81 2.22v3.29c0 .32 .21 .7 .82 .58A12 12 0 0 0 12 .5z"/></svg>
               GitHub
             </a>
           </div>
         </article>
 
-        <!-- 7 -->
+        <!-- 6: ML Prediction Challenge -->
         <article class="project card">
           <h3>Machine Learning Prediction Challenge</h3>
+          <p>Achieved 90%+ accuracy in a supervised prediction challenge.</p>
+          <div class="chips">
+            <span class="chip">Random Forest</span><span class="chip">LightGBM</span>
+          </div>
           <div class="actions">
-            <a class="iconbtn" href="#" target="_blank" rel="noopener" aria-label="PDF">
-              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM8 14h3a2 2 0 0 0 0-4H8v4zm2-3h1a1 1 0 1 1 0 2h-1v-2zm3-7.5L18.5 9H13V3.5z"/></svg>
-              PDF
+            <a class="iconbtn" href="#" target="_blank" rel="noopener" aria-label="HTML document">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM13 3.5 18.5 9H13V3.5z"/></svg>
+              HTML document
             </a>
             <a class="iconbtn" href="#" target="_blank" rel="noopener" aria-label="GitHub">
-              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.09-.75.08-.74.08-.74 1.2.08 1.84 1.23 1.84 1.23 1.08 1.85 2.83 1.31 3.52 1 .11-.79.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.23-3.22-.12-.3-.54-1.51.12-3.14 0 0 1.01-.32 3.3 1.23A11.5 11.5 0 0 1 12 6.84c1.02 0 2.05.14 3.01.4 2.28-1.55 3.29-1.23 3.29-1.23.67 1.63.25 2.84.13 3.14.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.49 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .5z"/></svg>
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.09-.75.08-.74 .08-.74 1.2 .08 1.84 1.23 1.84 1.23 1.08 1.85 2.83 1.31 3.52 1 .11-.79 .42-1.31 .76-1.61 -2.66 -.3 -5.46 -1.33 -5.46 -5.93 0 -1.31 .47 -2.38 1.23 -3.22 -.12 -.3 -.54 -1.51 .12 -3.14 0 0 1.01 -.32 3.3 1.23A11.5 11.5 0 0 1 12 6.84c1.02 0 2.05 .14 3.01 .4 2.28 -1.55 3.29 -1.23 3.29 -1.23 .67 1.63 .25 2.84 .13 3.14 .77 .84 1.23 1.91 1.23 3.22 0 4.61 -2.81 5.63 -5.49 5.93 .43 .37 .81 1.1 .81 2.22v3.29c0 .32 .21 .7 .82 .58A12 12 0 0 0 12 .5z"/></svg>
               GitHub
             </a>
           </div>
         </article>
 
-        <!-- 8 -->
+        <!-- 7: Causal Inference Reappraisal -->
         <article class="project card">
-          <h3>Web Scraping Project</h3>
+          <h3>Causal Inference: Paper Reappraisal</h3>
+          <p>Reappraisal of Téllez (2022), <em>Land, Opportunism, and Displacement in Civil Wars: Evidence from Colombia</em>.</p>
+          <div class="chips">
+            <span class="chip">Causal Inference</span><span class="chip">DiD</span>
+          </div>
           <div class="actions">
             <a class="iconbtn" href="#" target="_blank" rel="noopener" aria-label="PDF">
               <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM8 14h3a2 2 0 0 0 0-4H8v4zm2-3h1a1 1 0 1 1 0 2h-1v-2zm3-7.5L18.5 9H13V3.5z"/></svg>
               PDF
             </a>
             <a class="iconbtn" href="#" target="_blank" rel="noopener" aria-label="GitHub">
-              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.09-.75.08-.74.08-.74 1.2.08 1.84 1.23 1.84 1.23 1.08 1.85 2.83 1.31 3.52 1 .11-.79.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.23-3.22-.12-.3-.54-1.51.12-3.14 0 0 1.01-.32 3.3 1.23A11.5 11.5 0 0 1 12 6.84c1.02 0 2.05.14 3.01.4 2.28-1.55 3.29-1.23 3.29-1.23.67 1.63.25 2.84.13 3.14.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.49 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .5z"/></svg>
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.4c .6 .11 .82 -.26 .82 -.58v -2c -3.34 .73 -4.04 -1.61 -4.04 -1.61 -.55 -1.4 -1.34 -1.77 -1.34 -1.77 -1.09 -.75 .08 -.74 .08 -.74 1.2 .08 1.84 1.23 1.84 1.23 1.08 1.85 2.83 1.31 3.52 1 .11 -.79 .42 -1.31 .76 -1.61 -2.66 -.3 -5.46 -1.33 -5.46 -5.93 0 -1.31 .47 -2.38 1.23 -3.22 -.12 -.3 -.54 -1.51 .12 -3.14 0 0 1.01 -.32 3.3 1.23A11.5 11.5 0 0 1 12 6.84c1.02 0 2.05 .14 3.01 .4 2.28 -1.55 3.29 -1.23 3.29 -1.23 .67 1.63 .25 2.84 .13 3.14 .77 .84 1.23 1.91 1.23 3.22 0 4.61 -2.81 5.63 -5.49 5.93 .43 .37 .81 1.1 .81 2.22v3.29c0 .32 .21 .7 .82 .58A12 12 0 0 0 12 .5z"/></svg>
               GitHub
             </a>
           </div>
@@ -380,3 +381,5 @@
   </script>
 </body>
 </html>
+
+
