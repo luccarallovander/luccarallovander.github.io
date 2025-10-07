@@ -142,6 +142,18 @@ ul.icons .icon.style1:hover {
   box-shadow:var(--shadow); transform:translateY(-1px);
 }
 ul.icons .icon.style1 i { font-size:20px; line-height:1; }
+
+  /* Icons: plain glyphs, no circles, no labels */
+ul.icons { display:flex; gap:16px; padding:0; list-style:none; margin-top:16px; }
+ul.icons .label { display:none; }                 /* hide text */
+ul.icons .icon.style1 {
+  width:auto; height:auto; padding:0;             /* remove circle sizing */
+  border:none; background:transparent;            /* no circle */
+  color: var(--text);
+  box-shadow:none; transform:none;
+}
+ul.icons .icon.style1 i { font-size:22px; line-height:1; }  /* size of glyph */
+ul.icons .icon.style1:hover { color: var(--primary); }       /* simple hover */
   
   </style>
 </head>
