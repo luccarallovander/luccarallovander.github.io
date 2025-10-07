@@ -180,15 +180,9 @@ ul.icons .icon.style1:hover { color: var(--primary); }       /* simple hover */
 #hero ul.icons .icon.style1:hover { color: var(--primary); }
 #hero ul.icons .icon.style1 i{ font-size: 22px; line-height: 1; }
 
-  /* Fine-tune hero icon alignment */
-:root { --hero-icon-nudge: 6px; }  /* try 4–10px to taste */
-#hero ul.icons { margin-left: var(--hero-icon-nudge); }
-
-/* Optional: center narrow glyphs (e.g., LinkedIn) inside their click area */
-#hero ul.icons .icon.style1 i {
-  width: 1em;      /* fixed width for each icon */
-  text-align: center; /* centers the glyph */
-}
+/* spacing around the icons so they sit nicely between title and intro */
+#hero p + ul.icons { margin-top: 10px; }
+#hero ul.icons + p { margin-top: 10px; }
   
   </style>
 </head>
@@ -212,48 +206,37 @@ ul.icons .icon.style1:hover { color: var(--primary); }       /* simple hover */
   </header>
 
   <main class="wrapper">
-    <!-- HERO -->
-    <section class="grid grid-2" id="hero">
-      <div>
-        <h1>Lucca Rallo Vanderchmitt</h1>
-        <p>MSc Applied Social Data Science @ The London School of Economics and Political Science</p>
-        <p>Welcome! On this site, I share my open-source data science and research projects, spanning computational social science and applied industry work.</p>
-        <div class="pillbar">
-          <span class="pill">LLMs</span>
-          <span class="pill">ML</span>
-          <span class="pill">Causal Inference</span>
-          <span class="pill">NLP</span>
-          <span class="pill">R / Python / SQL</span>
-        </div>
+<!-- HERO -->
+<section class="grid grid-2" id="hero">
+  <div>
+    <h1>Lucca Rallo Vanderchmitt</h1>
+    <p>MSc Applied Social Data Science @ The London School of Economics and Political Science</p>
 
-        <!-- Socials -->
-        <ul class="icons">
-  <li>
-    <a href="https://www.linkedin.com/in/lucca-rallo-vanderchmitt/" class="icon style1" target="_blank" rel="noopener" aria-label="LinkedIn">
-      <i class="fa-brands fa-linkedin-in"></i>
-      <span class="label">LinkedIn</span>
-    </a>
-  </li>
-  <li>
-    <a href="https://github.com/luccarallovander" class="icon style1" target="_blank" rel="noopener" aria-label="GitHub">
-      <i class="fa-brands fa-github"></i>
-      <span class="label">GitHub</span>
-    </a>
-  </li>
-  <li>
-    <a href="mailto:l.rallo.vanderchmitt@gmail.com" class="icon style1" aria-label="Email">
-      <i class="fa-solid fa-envelope"></i>
-      <span class="label">Email</span>
-    </a>
-  </li>
-          
-</ul>
-      </div>
+    <!-- Icons (moved here, right after the title line) -->
+    <ul class="icons">
+      <li><a href="https://www.linkedin.com/in/lucca-rallo-vanderchmitt/" class="icon style1" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+      <li><a href="https://github.com/luccarallovander" class="icon style1" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+      <li><a href="mailto:l.rallo.vanderchmitt@gmail.com" class="icon style1" aria-label="Email"><i class="fa-solid fa-envelope"></i></a></li>
+    </ul>
 
-      <div class="hero-photo">
-        <img class="avatar-lg" src="avatar.jpg" alt="Lucca headshot large" />
-      </div>
-    </section>
+    <!-- Then the intro paragraph -->
+    <p>Welcome! On this site, I share my open-source data science and research projects, spanning computational social science and applied industry work.</p>
+
+    <!-- Then the skill pills -->
+    <div class="pillbar">
+      <span class="pill">LLMs</span>
+      <span class="pill">ML</span>
+      <span class="pill">Causal Inference</span>
+      <span class="pill">NLP</span>
+      <span class="pill">R / Python / SQL</span>
+    </div>
+  </div>
+
+  <div class="hero-photo">
+    <img class="avatar-lg" src="avatar.jpg" alt="Lucca headshot large" />
+  </div>
+</section>
+
 
  <!-- ABOUT -->
 <section id="about">
