@@ -156,6 +156,30 @@ ul.icons .icon.style1 {
 }
 ul.icons .icon.style1 i { font-size:22px; line-height:1; }  /* size of glyph */
 ul.icons .icon.style1:hover { color: var(--primary); }       /* simple hover */
+
+
+  /* Hero: align social icons with text/pills */
+#hero ul.icons{
+  /* kill default UL indent + extra bottom margin */
+  margin: 12px 0 0 0;
+  padding: 0;                /* removes left indent */
+  list-style: none;
+
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+/* if you're using the plain Font Awesome glyphs (no circles) */
+#hero ul.icons .label { display: none; }
+#hero ul.icons .icon.style1{
+  width: auto; height: auto; padding: 0;
+  border: none; background: transparent; box-shadow: none;
+  color: var(--text);
+}
+#hero ul.icons .icon.style1:hover { color: var(--primary); }
+#hero ul.icons .icon.style1 i{ font-size: 22px; line-height: 1; }
+
   
   </style>
 </head>
